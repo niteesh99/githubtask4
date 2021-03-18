@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="myscript.js"></script>
+    <title>Document</title>
+</head>
+<body onload="onLoad()">
+    <div class="container">
+
+        <!-- NAVBAR CONTENT -->
+
+        <div class="list navbar">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <button class="btn">signup</button>
+                <img class="logo" src="logo.png" width="200" height="70" alt="">
+                <ul>
+                    <li>
+                        <select>
+                            <option value="">Why Github?</option>
+                        </select>
+                    </li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Enterprice</a></li>
+                    <li>
+                        <select>
+                            <option value="">Explore</option>
+                        </select>
+                    </li>
+                    <li><a href="">Marketplace</a></li>
+                    <li>
+                        <select>
+                            <option value="">Pricing</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- SIDEBAR  CONTENT-->
+
+
+        <div class="list sidebar">
+            <div class="sidebarcontent">
+                <div class="list sidelogo">
+                    <img src="avatar.png" alt="">
+                    <p>NITEESH</p>
+                </div>
+                <br>
+                <div class="list sidebtn">
+                    <label><i class="fas fa-users"></i>Followers</label>
+                    <label style="margin-left:20px">Following</label>
+                    <label>44</label>
+                    <button class="btn1">Follow</button>
+                    <button class="btn2">...</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- TABS -->
+
+        <div class="list tabs">
+            <button class="tablinks active" onclick="openCity(event, 'Overview')"><i class="fas fa-book-open"></i>Overview</button>
+            <button class="tablinks" onclick="openCity(event, 'Repositories')"><i class="fas fa-book"></i>Repositories<label id="repocount"></label></button>
+            <button class="tablinks" onclick="openCity(event, 'Project')"><i class="fas fa-chart-bar"></i>Project</button>
+        </div>
+
+        <!-- SEARCH CONTENT -->
+
+
+        <div class="list search">
+            <input type="text" id="filter" onkeyup="filter()" placeholder="Find a Repository...">
+            <select>
+                <option value="All">Type:All</option>
+            </select>
+            <select onchange="filterbylang()" id="lang">
+                <option value="">Language:All</option>
+                <option value="JavaScript">Language:JavaScript</option>
+                <option value="TypeScript">Language:TypeScript</option>
+                <option value="CSS">Language:CSS</option>
+            </select>
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+
+
+        <div class="list main">
+            <div id="Overview" class="tabcontent active">
+                Overview
+            </div>
+            
+            <div id="Repositories" class="tabcontent">
+                Repositories
+            </div>
+            
+            <div id="Project" class="tabcontent">
+                Project
+            </div>
+        </div>
+    </div>
+</body>
+</html>
